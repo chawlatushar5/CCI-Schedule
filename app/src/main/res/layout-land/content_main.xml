@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+
+By: Tushar Chawla
+Date : July 26, 2016
+<HorizontalScrollView
+    android:id="@+id/horizontalScrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="icommons.ccischedule.MainActivity"
+    android:clickable="true">
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dip"
+        android:scrollbarStyle="outsideInset"
+        android:fillViewport="true">
+        <HorizontalScrollView
+            android:id="@+id/horizontalView"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dip">
+    <TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true">
+    >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday"
+                android:gravity="center"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tuesday"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold"  android:background="@drawable/table_cell_bg"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wednesday"
+                android:gravity="center"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold"  android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thursday"
+                android:gravity="center"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold"  android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friday"
+                android:gravity="center"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold"  android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saturday"
+                android:gravity="center"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold"  android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunday"
+                android:gravity="center"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold"   />
+
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
+                 />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
+                 />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
+                 />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
+
+                android:textIsSelectable="false" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
+                 />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
+                 />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     7:30am - 12:30pm     "
+                android:layout_column="0"  android:textStyle="bold" android:gravity="center" android:background="#83dc23"
+                android:textSize="17dp" />
+            <!-- android:background="#83dc23"-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     7:30am - 12:30pm     "
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#83dc23"
+               />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     7:30am - 12:30pm     "
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  android:background="#83dc23"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     7:30am - 12:30pm     "
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#83dc23"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     7:30am - 12:30pm     "
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#83dc23"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     7:30am - 12:30pm     "
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#83dc23"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c50"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold"  android:background="@drawable/table_cell_bg"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c51"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c52"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c53"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c54"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c55"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c56"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c60"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c61"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c62"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c63"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c64"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c65"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c66"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c70"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c71"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c72"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c73"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c74"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c75"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c76"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c80"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c81"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c82"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c83"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c84"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c85"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c86"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c90"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c91"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c92"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c93"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c94"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c95"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c96"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" />
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     12:15pm - 5:15pm     "
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#d12a2a"
+                 />
+            <!--android:background="#bf0000"-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     12:15pm - 5:15pm     "
+
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#d12a2a" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     12:15pm - 5:15pm     "
+
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#d12a2a" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     12:15pm - 5:15pm     "
+
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#d12a2a" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     12:15pm - 5:15pm     "
+
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#d12a2a" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     1:00pm - 6:00pm     "
+
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#d12a2a" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     12:00pm - 5:00pm     "
+
+
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#d12a2a" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c120"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c121"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c122"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c123"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c124"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c125"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c126"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c130"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c131"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c132"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c133"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c134"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c135"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c136"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c140"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c141"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c142"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c143"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c144"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c145"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c146"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c150"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c151"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c152"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c153"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c154"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c155"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c156"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c160"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c161"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c162"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c163"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c164"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c165"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c166"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c170"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c171"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c172"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c173"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c174"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c175"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c176"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     5:00pm - 10:00pm     "
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#3f42d1"
+                />
+            <!--android:background="#3f42d1" -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     5:00pm - 10:00pm     "
+
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#3f42d1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     5:00pm - 10:00pm     "
+
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#3f42d1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     5:00pm - 10:00pm     "
+
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#3f42d1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     5:00pm - 10:00pm     "
+
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="#3f42d1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c190"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c191"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c192"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c193"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c194"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c195"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c196"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c200"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c201"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c202"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c203"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c204"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c205"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c206"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c210"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c211"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c212"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c213"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c214"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c215"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c216"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c220"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c221"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c222"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c223"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c224"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c225"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c226"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_bg"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c230"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c231"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c232"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c233"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c234"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c235"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/submit"
+                android:text="Refresh"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_column="3" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/table_row_last_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c240"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c241"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c242"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c243"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c244"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c245"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/table_cell_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/c246"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
+
+                />
+        </TableRow>
+
+
+
+
+
+    </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>
+
