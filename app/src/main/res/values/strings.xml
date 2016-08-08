@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">CCI Schedule</string>
     <string name="action_settings">Settings</string>
+    <string name="api_key">c29d34a9118505b1f08e70eb668a92ef351928e1</string>
+
 </resources>

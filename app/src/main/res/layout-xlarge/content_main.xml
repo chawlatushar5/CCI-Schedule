@@ -24,6 +24,14 @@ Date : July 26, 2016
     tools:context="icommons.ccischedule.MainActivity"
     android:clickable="true">
 -->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="icommons.ccischedule.MainActivity">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -110,37 +118,45 @@ Date : July 26, 2016
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/Mon"
                 android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
-                 />
+                />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/Tue"
                 android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
-                 />
+                />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/Wed"
                 android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
-                 />
+                />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/Thu"
+
                 android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
 
                 android:textIsSelectable="false" />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/Fri"
                 android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
-                 />
+                />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/Sat"
                 android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
-                 />
+                />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/Sun"
                 android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"
                 />
         </TableRow>
@@ -1090,14 +1106,12 @@ Date : July 26, 2016
                 android:text=""
                 android:id="@+id/c235"
                 android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/submit"
-                android:text="Refresh"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_column="3" />
+                android:text=""
+                android:id="@+id/c236"
+                android:layout_column="0" android:textSize="17dp" android:textStyle="bold" android:gravity="center"  />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -1156,7 +1170,24 @@ Date : July 26, 2016
 
 
     </TableLayout>
+
         </HorizontalScrollView>
+
     </ScrollView>
+
+
+
+
+
 </LinearLayout>
+<android.support.design.widget.FloatingActionButton
+android:id="@+id/fab"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_gravity="bottom|end"
+android:layout_margin="@dimen/fab_margin"
+    app:fabSize="normal"
+android:src="@android:drawable/ic_menu_revert" />
+
+    </android.support.design.widget.CoordinatorLayout>
 

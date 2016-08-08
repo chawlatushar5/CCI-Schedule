@@ -5,14 +5,17 @@ package icommons.ccischedule;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
@@ -25,6 +28,8 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,6 +56,7 @@ public class MainActivity extends Activity {
 
 
     ArrayList<Shiftdata> java_shifts_array = new ArrayList<Shiftdata>();
+
     TextView c50 ;
     TextView c51 ;
     TextView c52 ;
@@ -86,6 +92,16 @@ public class MainActivity extends Activity {
     TextView c94 ;
     TextView c95 ;
     TextView c96 ;
+
+    EditText Monday;
+    EditText Tuesday;
+    EditText Wednesday;
+    EditText Thursday;
+    EditText Friday;
+    EditText Saturday;
+    EditText Sunday;
+
+
 
     TextView c120 ;
     TextView c121 ;
@@ -178,6 +194,32 @@ public class MainActivity extends Activity {
         //Fullscreen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.content_main);
+
+
+
+       final FloatingActionButton actionButton = (FloatingActionButton) findViewById(R.id.fab);
+        Monday = (EditText) findViewById(R.id.Mon);
+        Tuesday = (EditText) findViewById(R.id.Tue);
+        Wednesday = (EditText) findViewById(R.id.Wed);
+        Thursday = (EditText) findViewById(R.id.Thu);
+        Friday = (EditText) findViewById(R.id.Fri);
+        Saturday = (EditText) findViewById(R.id.Sat);
+        Sunday = (EditText) findViewById(R.id.Sun);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("Wheniwork data", Context.MODE_PRIVATE);
+        Monday.setText(sharedPreferences.getString("Monday", ""));
+        Tuesday.setText(sharedPreferences.getString("Tuesday",""));
+        Wednesday.setText(sharedPreferences.getString("Wednesday",""));
+        Thursday.setText(sharedPreferences.getString("Thursday",""));
+        Friday.setText(sharedPreferences.getString("Friday", ""));
+        Saturday.setText(sharedPreferences.getString("Saturday", ""));
+        Sunday.setText(sharedPreferences.getString("Sunday", ""));
+
+        Log.d(TAG, "The text on Monday was: " + sharedPreferences.getString("Monday", ""));
+
+
+
+
         try {
             new JSONTask().execute("https://api.wheniwork.com/2/schedule");
             //Log.d(TAG, "Exception " + e);
@@ -186,7 +228,7 @@ public class MainActivity extends Activity {
         }
         populate();
 
-        final Button btn = (Button)findViewById(R.id.submit);
+       // final Button btn = (Button)findViewById(R.id.submit);
         // data = (TextView)findViewById(R.id.jsondata);
 
 
@@ -202,7 +244,7 @@ public class MainActivity extends Activity {
             return;
         }
         else {
-            btn.setOnClickListener(new View.OnClickListener() {
+            actionButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
@@ -224,7 +266,7 @@ public class MainActivity extends Activity {
                 handler.post(new Runnable() {
                     public void run() {
                         try {
-                            btn.callOnClick();
+                            actionButton.callOnClick();
                         } catch (Exception e) {
                         }
                     }
@@ -1111,5 +1153,22 @@ public class MainActivity extends Activity {
 
         }
 
+    }
+
+    @Override
+    protected void onStop() {
+        SharedPreferences sharedPreferences = getSharedPreferences("Wheniwork data", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("Monday", Monday.getText().toString());
+        editor.putString("Tuesday", Tuesday.getText().toString());
+        editor.putString("Wednesday", Wednesday.getText().toString());
+        editor.putString("Thursday", Thursday.getText().toString());
+        editor.putString("Friday", Friday.getText().toString());
+        editor.putString("Saturday", Saturday.getText().toString());
+        editor.putString("Sunday", Sunday.getText().toString());
+
+        editor.commit();
+        Toast.makeText(this, "Data was saved!", Toast.LENGTH_LONG).show();
+        super.onDestroy();
     }
 }
