@@ -7,37 +7,25 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
-import android.speech.tts.TextToSpeech;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -186,6 +174,9 @@ public class MainActivity extends Activity {
     TextView c245 ;
     TextView c246 ;
 
+   // Intent intent = getIntent();
+   String mytoken ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -194,6 +185,20 @@ public class MainActivity extends Activity {
         //Fullscreen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.content_main);
+
+        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                mytoken= null;
+            } else {
+                mytoken= extras.getString("token");
+            }
+        } else {
+            mytoken= (String) savedInstanceState.getSerializable("token");
+        }
+
+        Log.d(TAG, "Token" + mytoken);
 
 
 
@@ -1012,9 +1017,10 @@ public class MainActivity extends Activity {
             BufferedReader reader = null;
 
             try {
+                String tone = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2N0Ijo1OTEzMTYsInVzZXIiOjUyNjgzNzYsImFwcCI6MTE0NCwibG9naW4iOjM5NTk5NDYsImlhdCI6MTQ3MjY3MjY5MSwianRpIjoiZDQwYjJmZWYtMDVmYy01MGIxLWEzYTUtZWVkYjQ3YmQ3ZTNhIn0.rwKzYDhxdzTdtAMvdU-7f124fB86O3fLHWD_kifJ_LQ";
                 URL url = new URL(params[0]);
                 urlConnection = (HttpURLConnection) url.openConnection();
-                urlConnection.setRequestProperty("W-Token", "a3330564b51821a44d4ea41019222eb52e0c9769");
+                urlConnection.setRequestProperty("W-Token", tone);
                 urlConnection.connect();
                 InputStream stream = urlConnection.getInputStream();
                 reader = new BufferedReader(new InputStreamReader(stream));
