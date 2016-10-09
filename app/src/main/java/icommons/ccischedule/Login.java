@@ -25,6 +25,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.Buffer;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by Tushar on 8/5/16.
@@ -59,12 +60,36 @@ public class Login extends Activity{
 
                 if (!email.getText().toString().equals("") && !password.getText().toString().equals("")){
 
-                    new getshifts().execute("https://api.wheniwork.com/2/login");
+                    String bla = null;
+                    try {
+                        bla = new getshifts().execute("https://api.wheniwork.com/2/login").get();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    }
+                    JSONObject parentOBJ = null;
+                    try {
+                        parentOBJ=new JSONObject(bla);
+
+                        token = parentOBJ.getString("token");
+                        text.setText(token);
+
+
+                        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                        //prefs.edit().putString("Token",token).commit();
+
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
 
                     Intent intent = new Intent(Login.this, MainActivity.class);
                     intent.putExtra("token", token);
                     Log.d(TAG, "Token"+ token );
-                    startActivity(intent);
+                    if (text.getText().length()>35) {
+                        startActivity(intent);
+                    }
 
 
 
@@ -100,6 +125,7 @@ public class Login extends Activity{
         protected String doInBackground(String... params) {
             HttpURLConnection connection = null;
             BufferedReader bufferedReader = null;
+            String Token=null;
 
             try {
                 URL qurl= new URL(params[0]);
@@ -133,12 +159,12 @@ public class Login extends Activity{
                     br.close();
                     System.out.print(""+sb.toString());
                     Log.d(TAG, ""+sb.toString() );
-                    return sb.toString();
+                    Token= sb.toString();
                 }
                 else{
                     System.out.print(connection.getResponseMessage());
                     Log.d(TAG, ""+connection.getResponseMessage());
-                    return "Wrong Username/Password!";
+                    Token= "Wrong Username/Password!";
 
                 }
 
@@ -153,7 +179,7 @@ public class Login extends Activity{
                 e.printStackTrace();
             }
 
-            return null;
+            return Token;
         }
 
         @Override

@@ -13,7 +13,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
@@ -39,7 +38,6 @@ import java.util.TimerTask;
 
 public class MainActivity extends Activity {
     private static final String TAG = "MainActivity";
-    //private TextView data;
     ArrayList<Users> java_users_array = new ArrayList<Users>();
 
 
@@ -199,6 +197,7 @@ public class MainActivity extends Activity {
         }
 
         Log.d(TAG, "Token" + mytoken);
+
 
 
 
@@ -540,7 +539,7 @@ public class MainActivity extends Activity {
             temp_start = java_shifts_array.get(s).getStart_time();
             temp_end =java_shifts_array.get(s).getEnd_time();
             Log.d(TAG, "Inside the populate method");
-            if (temp_start.contains("Mon") && (temp_start.contains("07:30:00")) && (temp_end.contains("12:30:00"))){
+            if (temp_start.contains("Mon") && (temp_start.contains("07:30:00")) && (temp_end.contains("12:15:00"))){
                 Log.d(TAG, "Inside the start time container"+java_shifts_array.get(s).getStart_time()+ " hey: "+ java_shifts_array.get(s).getEnd_time());
                 if (c50.getText().toString().equalsIgnoreCase("")){
 
@@ -564,7 +563,7 @@ public class MainActivity extends Activity {
 
 
             }
-            if (temp_start.contains("Mon") && (temp_start.contains("12:15:00")) && (temp_end.contains("17:15:00"))){
+            if (temp_start.contains("Mon") && (temp_start.contains("12:15:00")) && (temp_end.contains("17:00:00"))){
                 Log.d(TAG, "Inside the start time container"+java_shifts_array.get(s).getStart_time()+ " hey: "+ java_shifts_array.get(s).getEnd_time());
                 if (c120.getText().toString().equalsIgnoreCase("")){
 
@@ -621,7 +620,7 @@ public class MainActivity extends Activity {
 
 
             }
-            if (temp_start.contains("Tue") && (temp_start.contains("07:30:00")) && (temp_end.contains("12:30:00"))){
+            if (temp_start.contains("Tue") && (temp_start.contains("07:30:00")) && (temp_end.contains("12:15:00"))){
                 Log.d(TAG, "Inside the start time container"+java_shifts_array.get(s).getStart_time()+ " hey: "+ java_shifts_array.get(s).getEnd_time());
                 if (c51.getText().toString().equalsIgnoreCase("")){
 
@@ -645,7 +644,7 @@ public class MainActivity extends Activity {
 
 
             }
-            if (temp_start.contains("Tue") && (temp_start.contains("12:15:00")) && (temp_end.contains("17:15:00"))){
+            if (temp_start.contains("Tue") && (temp_start.contains("12:15:00")) && (temp_end.contains("17:00:00"))){
                 Log.d(TAG, "Inside the start time container"+java_shifts_array.get(s).getStart_time()+ " hey: "+ java_shifts_array.get(s).getEnd_time());
                 if (c121.getText().toString().equalsIgnoreCase("")){
 
@@ -697,7 +696,7 @@ public class MainActivity extends Activity {
 
 
             }
-            if (temp_start.contains("Wed") && (temp_start.contains("07:30:00")) && (temp_end.contains("12:30:00"))){
+            if (temp_start.contains("Wed") && (temp_start.contains("07:30:00")) && (temp_end.contains("12:15:00"))){
                 Log.d(TAG, "Inside the start time container"+java_shifts_array.get(s).getStart_time()+ " hey: "+ java_shifts_array.get(s).getEnd_time());
                 if (c52.getText().toString().equalsIgnoreCase("")){
 
@@ -721,7 +720,7 @@ public class MainActivity extends Activity {
 
 
             }
-            if (temp_start.contains("Wed") && (temp_start.contains("12:15:00")) && (temp_end.contains("17:15:00"))){
+            if (temp_start.contains("Wed") && (temp_start.contains("12:15:00")) && (temp_end.contains("17:00:00"))){
                 Log.d(TAG, "Inside the start time container"+java_shifts_array.get(s).getStart_time()+ " hey: "+ java_shifts_array.get(s).getEnd_time());
                 if (c122.getText().toString().equalsIgnoreCase("")){
 
@@ -773,7 +772,7 @@ public class MainActivity extends Activity {
 
 
             }
-            if (temp_start.contains("Thu") && (temp_start.contains("07:30:00")) && (temp_end.contains("12:30:00"))){
+            if (temp_start.contains("Thu") && (temp_start.contains("07:30:00")) && (temp_end.contains("12:15:00"))){
                 Log.d(TAG, "Inside the start time container"+java_shifts_array.get(s).getStart_time()+ " hey: "+ java_shifts_array.get(s).getEnd_time());
                 if (c53.getText().toString().equalsIgnoreCase("")){
 
@@ -797,7 +796,7 @@ public class MainActivity extends Activity {
 
 
             }
-            if (temp_start.contains("Thu") && (temp_start.contains("12:15:00")) && (temp_end.contains("17:15:00"))){
+            if (temp_start.contains("Thu") && (temp_start.contains("12:15:00")) && (temp_end.contains("17:00:00"))){
                 Log.d(TAG, "Inside the start time container"+java_shifts_array.get(s).getStart_time()+ " hey: "+ java_shifts_array.get(s).getEnd_time());
                 if (c123.getText().toString().equalsIgnoreCase("")){
 
@@ -849,7 +848,7 @@ public class MainActivity extends Activity {
 
 
             }
-            if (temp_start.contains("Fri") && (temp_start.contains("07:30:00")) && (temp_end.contains("12:30:00"))){
+            if (temp_start.contains("Fri") && (temp_start.contains("07:30:00")) && (temp_end.contains("12:15:00"))){
                 Log.d(TAG, "Inside the start time container"+java_shifts_array.get(s).getStart_time()+ " hey: "+ java_shifts_array.get(s).getEnd_time());
                 if (c54.getText().toString().equalsIgnoreCase("")){
 
@@ -873,7 +872,7 @@ public class MainActivity extends Activity {
 
 
             }
-            if (temp_start.contains("Fri") && (temp_start.contains("12:15:00")) && (temp_end.contains("17:15:00"))){
+            if (temp_start.contains("Fri") && (temp_start.contains("12:15:00")) && (temp_end.contains("17:00:00"))){
                 Log.d(TAG, "Inside the start time container"+java_shifts_array.get(s).getStart_time()+ " hey: "+ java_shifts_array.get(s).getEnd_time());
                 if (c124.getText().toString().equalsIgnoreCase("")){
 
@@ -1017,10 +1016,9 @@ public class MainActivity extends Activity {
             BufferedReader reader = null;
 
             try {
-                String tone = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2N0Ijo1OTEzMTYsInVzZXIiOjUyNjgzNzYsImFwcCI6MTE0NCwibG9naW4iOjM5NTk5NDYsImlhdCI6MTQ3MjY3MjY5MSwianRpIjoiZDQwYjJmZWYtMDVmYy01MGIxLWEzYTUtZWVkYjQ3YmQ3ZTNhIn0.rwKzYDhxdzTdtAMvdU-7f124fB86O3fLHWD_kifJ_LQ";
                 URL url = new URL(params[0]);
                 urlConnection = (HttpURLConnection) url.openConnection();
-                urlConnection.setRequestProperty("W-Token", tone);
+                urlConnection.setRequestProperty("W-Token", mytoken);
                 urlConnection.connect();
                 InputStream stream = urlConnection.getInputStream();
                 reader = new BufferedReader(new InputStreamReader(stream));
@@ -1146,7 +1144,8 @@ public class MainActivity extends Activity {
                 //Log.d(TAG, "userid: " + user);
 
                 if (id==java_users_array.get(m).getUser_id()){
-                    lastname = java_users_array.get(m).getLast_name();
+
+                    lastname = java_users_array.get(m).getFirst_name()+ " " +java_users_array.get(m).getLast_name();
                     //Log.d(TAG, "lastname: " + lastname);
 
                 }

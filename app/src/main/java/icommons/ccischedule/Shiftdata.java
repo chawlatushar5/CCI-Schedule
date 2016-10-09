@@ -12,6 +12,7 @@ public class Shiftdata {
     private int user_id;
     private int shift_id;
     private String lastname;
+    private String firstname;
 
     public String getLastname() {
         return lastname;
@@ -53,5 +54,11 @@ public class Shiftdata {
         this.shift_id = shift_id;
     }
 
+    public String getFirstname() {
+        return firstname;
+    }
 
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
 }
